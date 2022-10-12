@@ -1,9 +1,11 @@
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Program {
     public static void main(String[] args) {
         // Task1();
-        Task2();
+        // Task2();
+        Task3();
     }
 
     public static void Task1() {
@@ -27,6 +29,22 @@ public class Program {
         System.out.println(queue);
         System.out.println(queue.dequeue());
         System.out.println(queue);
+    }
+
+    public static void Task3() {
+        LinkedList<Integer> lst = new LinkedList<>();
+        lst.add(0);
+        lst.add(1);
+        lst.add(2);
+        lst.add(3);
+
+        ListIterator<Integer> iter = lst.listIterator();
+        int sum = 0;
+        while (iter.hasNext()) {
+            sum += iter.next();
+        }
+
+        System.out.println(sum);
     }
 
     public static LinkedList<Integer> reverseLinkedList(LinkedList<Integer> lst) {
